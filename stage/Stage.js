@@ -57,8 +57,8 @@ export default class Stage extends StageBase {
         respo = this.responseText;
         console.log(respo)
     };
-    this.vars.Message = respo
-        this.watchers.message.visible = true;
+    this.vars.message = respo
+    this.watchers.message.visible = true;
     xhr.send(data);
   }
 
