@@ -41,6 +41,7 @@ export default class Stage extends StageBase {
   }
 
   *whenGreenFlagClicked() {
+    var respo = null
     yield* this.askAndWait("Username");
     this.vars.username = this.answer;
     yield* this.askAndWait("Password");
@@ -52,8 +53,9 @@ export default class Stage extends StageBase {
     xhr.open('POST', 'https://api.scratchblox.tk/register', true);
     xhr.onload = function () {
         // do something to response
-        this.vars.message = this.responseText;
+        respo = this.responseText;
     };
+    this.vars.message
     xhr.send(data);
   }
 
