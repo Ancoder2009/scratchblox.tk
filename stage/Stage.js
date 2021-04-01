@@ -41,7 +41,7 @@ export default class Stage extends StageBase {
   }
 
   *whenGreenFlagClicked() {
-    this.watchers.Message.visible = false;
+    this.watchers.message.visible = false;
     var respo = null
     yield* this.askAndWait("Username");
     this.vars.username = this.answer;
@@ -54,7 +54,7 @@ export default class Stage extends StageBase {
     xhr.open('POST', 'https://api.scratchblox.tk/register', true);
     xhr.onload = function () {
         // do something to response
-        this.watchers.mySpriteVar.visible = true;
+        this.watchers.message.visible = true;
         respo = this.responseText;
         console.log(respo)
     };
