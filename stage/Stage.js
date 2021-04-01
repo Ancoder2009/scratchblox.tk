@@ -55,7 +55,7 @@ export default class Stage extends StageBase {
         // do something to response
         respo = this.responseText;
     };
-    this.vars.message
+    this.vars.Message = respo
     xhr.send(data);
   }
 
