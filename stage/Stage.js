@@ -57,9 +57,10 @@ export default class Stage extends StageBase {
         respo = this.responseText;
         console.log(respo)
     };
+    xhr.send(data);
     this.vars.message = respo
     this.watchers.message.visible = true;
-    xhr.send(data);
+    yield;
   }
 
   *makeAcc() {}
