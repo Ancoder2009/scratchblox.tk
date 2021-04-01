@@ -42,7 +42,7 @@ export default class Stage extends StageBase {
 
   *whenGreenFlagClicked() {
     this.watchers.message.visible = false;
-    var respo = null
+    var respo = ""
     yield* this.askAndWait("Username");
     this.vars.username = this.answer;
     yield* this.askAndWait("Password");
