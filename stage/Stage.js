@@ -54,6 +54,7 @@ export default class Stage extends StageBase {
     xhr.onload = function () {
         // do something to response
         respo = this.responseText;
+        console.log(this.responseText)
     };
     this.vars.Message = respo
     xhr.send(data);
