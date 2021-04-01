@@ -54,11 +54,11 @@ export default class Stage extends StageBase {
     xhr.open('POST', 'https://api.scratchblox.tk/register', true);
     xhr.onload = function () {
         // do something to response
-        this.watchers.message.visible = true;
         respo = this.responseText;
         console.log(respo)
     };
     this.vars.Message = respo
+        this.watchers.message.visible = true;
     xhr.send(data);
   }
 
