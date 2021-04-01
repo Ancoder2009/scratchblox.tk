@@ -41,6 +41,7 @@ export default class Stage extends StageBase {
   }
 
   *whenGreenFlagClicked() {
+    this.watchers.mySpriteVar.visible = false;
     var respo = null
     yield* this.askAndWait("Username");
     this.vars.username = this.answer;
@@ -54,7 +55,7 @@ export default class Stage extends StageBase {
     xhr.onload = function () {
         // do something to response
         respo = this.responseText;
-        console.log(this.responseText)
+        console.log(respo)
     };
     this.vars.Message = respo
     xhr.send(data);
