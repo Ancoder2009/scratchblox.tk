@@ -52,7 +52,7 @@ export default class Stage extends StageBase {
     data.append('password', this.vars.password);
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://api.scratchblox.tk/register', true);
-    xhr.onload = function () {
+    yield xhr.onload = function () {
         // do something to response
         respo = this.responseText;
         console.log(respo)
