@@ -59,6 +59,7 @@ export default class Stage extends StageBase {
     };
     xhr.send(data);
     this.watchers.message.visible = true;
+    yield* this.wait(1)
     this.vars.message = respo
   }
 
